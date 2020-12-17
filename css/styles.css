@@ -1,0 +1,30 @@
+/*header*/
+nav li {
+  display: inline-block;
+}
+
+nav {
+  text-decoration: none;
+}
+
+a {
+  text-decoration: none;
+}
+/*body*/
+.explore {
+  background-image: url("../images/explore.jpg");
+  background-size: cover no-repeat;
+  background-size: 800px;
+  width: 800px;
+  height: 800px;
+}
+
+.img-homepage {
+  width: 100%;
+  padding: 50px;
+}
+
+/*Footer*/
+footer {
+  background-color: #093236;
+}
