@@ -1,6 +1,26 @@
-/*header*/
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/montserrat-v15-latin-regular.woff2") format("woff2");
+}
+
+h3 {
+  font-size: 20px;
+}
+p {
+  font-size: 15px;
+}
+/*header.........................................*/
+.menu body {
+  font-family: "Montserrat", Arial, sans-serif;
+}
 nav li {
   display: inline-block;
+  text-decoration: none;
+  padding: 40px;
+  font-size: 30px;
+  font-weight: bolder;
 }
 
 nav {
@@ -10,21 +30,78 @@ nav {
 a {
   text-decoration: none;
 }
-/*body*/
+
+.logo {
+  max-width: 200px;
+  float: left;
+}
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: right;
+}
+/*body..........................................*/
 .explore {
   background-image: url("../images/explore.jpg");
-  background-size: cover no-repeat;
-  background-size: 800px;
-  width: 800px;
-  height: 800px;
+  min-height: 140vh;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-y: center;
+  background-position-x: center;
 }
+#press {
+  scroll-behavior: smooth;
+}
+/*links*/
 
 .img-homepage {
-  width: 100%;
-  padding: 50px;
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  margin: 30px;
 }
 
-/*Footer*/
+.men {
+  background-image: url("../images/menlink.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  width: 600px;
+  height: 600px;
+  margin: 30px;
+}
+.women {
+  background-image: url("../images/womanlink.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  width: 600px;
+  height: 600px;
+  margin: 30px;
+}
+
+/*footer............................................*/
 footer {
   background-color: #093236;
+}
+
+footer,
+h3,
+p {
+  color: white;
+}
+
+footer,
+a {
+  font-size: 25px;
+  font-weight: bolder;
+}
+
+/*Media Queries*/
+@media (max-width: 900px);
+ {
+  header {
+    background-color: green;
+  }
 }
