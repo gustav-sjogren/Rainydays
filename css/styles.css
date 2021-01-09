@@ -5,6 +5,13 @@
   src: url("../fonts/montserrat-v15-latin-regular.woff2") format("woff2");
 }
 
+body {
+  font-family: "Montserrat", Arial, sans-serif;
+}
+header, main{
+padding: 50px;
+}
+
 h3 {
   font-size: 20px;
 }
@@ -12,96 +19,240 @@ p {
   font-size: 15px;
 }
 /*header.........................................*/
-.menu body {
-  font-family: "Montserrat", Arial, sans-serif;
+/*position*/
+#logo {
+  max-width: 250px;
+  float: left;
+ 
 }
-nav li {
-  display: inline-block;
-  text-decoration: none;
-  padding: 40px;
-  font-size: 30px;
-  font-weight: bolder;
-}
+
 
 nav {
-  text-decoration: none;
+  position: relative;
+  top: 30px;
+}
+.searchbar, .cart {
+  position: relative;
+  left: 20px;
 }
 
-a {
-  text-decoration: none;
+nav li {
+  display: inline-block;  
+  padding:4px;
 }
 
-.logo {
-  max-width: 200px;
-  float: left;
+nav ul {
+  padding: 20px;
 }
 
-.menu {
+header {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: right;
+  align-items: center;
 }
-/*body..........................................*/
-.explore {
-  background-image: url("../images/explore.jpg");
-  min-height: 140vh;
-  background-size: 100%;
-  background-repeat: no-repeat;
+#logo {
+  margin-bottom: 25px;
+}
+
+/*hover, breadcrumbs, styling*/
+nav a {
+  font-size: 25px;
+  font-weight: bolder;
+ 
+}
+nav a {
+  text-decoration: none;
+  color: #093236;
+  padding: 30px;
+}
+
+li a:hover {
+  background-color: #093236;
+  color: #fff;
+  padding: 10px 25px;
+  border-radius: 50px;
+}
+
+.current {
+   background-color: #093236;
+  color: #fff;
+  padding: 10px 25px;
+  border-radius: 20px;
+}
+
+
+
+/*Homepage......................................*/
+.welcome {
+  background-image: url(../images/explore.jpg);
+  min-height: 500px;
   background-size: cover;
-  background-position-y: center;
-  background-position-x: center;
+  background-repeat: no-repeat;
+  background-image: 100%;
 }
-#press {
-  scroll-behavior: smooth;
+#explore {
+  position: relative;
 }
+
+
 /*links*/
-
-.img-homepage {
-  display: flex;
-  flex-direction: row;
-  flex: 1;
-  margin: 30px;
-}
-
 .men {
-  background-image: url("../images/menlink.jpg");
-  background-size: 100%;
+  background-image: url(../images/menlink.jpg);
+ width: 625px;
+  min-height: 1000px;
   background-repeat: no-repeat;
-  width: 600px;
-  height: 600px;
-  margin: 30px;
 }
+
+
 .women {
-  background-image: url("../images/womanlink.jpg");
-  background-size: 100%;
-  background-repeat: no-repeat;
-  width: 600px;
-  height: 600px;
-  margin: 30px;
+  background-image: url(../images/womenlink.jpg);
+  width: 625px;
+  min-height: 500px;
+
+
 }
 
 /*footer............................................*/
 footer {
-  background-color: #093236;
+  height: 350px;
+  text-align: center;
+ 
+ 
 }
+.footer {
+  display: flex;
+  justify-content: space-evenly;
+  
+}
+.footer-item{
+ flex: 1 1 10px;
+ 
+ }
+/*change position:
+  top 
+  my account/customer
+  margin one the sides
+  */
+
+ /*
+footer{
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr ;
+  grid-gap: 10px;
+  margin: 50px 
+}
+*/
 
 footer,
-h3,
-p {
+h3 p {
   color: white;
 }
 
-footer,
-a {
+footer {
   font-size: 25px;
   font-weight: bolder;
+  background-color: #093236;
+}
+
+.cta-footer {
+  background-color: #fff;
+  text-decoration: none;
+   padding: 10px 25px;
+  border-radius: 50px;
+}
+
+footer a {
+  color: #093236;
+}
+.cta-footer:hover {
+  background-color: #286fac;
+  color: #fff;
+}
+
+/*Contact................................*/
+.contact{
+  display:flex;
+  justify-content: space-evenly;
+}
+
+.faq {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.q, .q2, .q3, .q4 {
+  position: relative;
+  bottom: 30px;
+}
+.answer, .answer2, .answer3, .answer4{
+ overflow: hidden
+}
+.faq label{
+  font-weight: bolder;
+}
+/*checkbox*/
+#q, #q2, #q3, #q4   {
+  display: none;
+}
+
+.answer, .answer2, .answer3, .answer4 {
+  display: none;
+
+}
+
+#q:checked ~ .answer, #q2:checked ~ .answer2,#q3:checked ~ .answer3,#q4:checked ~ .answer4 {
+  display:block;
+  position:static;
+}
+/*About...................................*/
+
+/*Men, women..............................................*/
+main {
+display:grid;
+}
+.categ {
+grid-template-areas: 
+'categ-one categ-two'
+'categ-three categ-four'
+
+
+}
+.categ-one{grid-area: .categ-one;} 
+.categ-two{grid-area: .categ-two;} 
+.categ-three {grid-area: .categ-three;}
+.categ-four{grid-area: .categ-four;}
+
+.categ-one  {
+  background-image: url(../images/menlink.jpg);
+  width: 625px;
+  min-height: 1000px;
+  background-repeat: no-repeat;
+}
+
+
+.categ-two  {
+  background-image: url(../images/menlink.jpg);
+  width: 625px;
+  min-height: 1000px;
+  background-repeat: no-repeat;
+
+}
+
+.categ-three {
+  background-image: url(../images/menlink.jpg);
+    width: 625px;
+  min-height: 1000px;
+  background-repeat: no-repeat;
+}
+
+.categ-four  {
+  background-image: url(../images/menlink.jpg);
+    width: 625px;
+  min-height: 1000px;
+  background-repeat: no-repeat;
 }
 
 /*Media Queries*/
-@media (max-width: 900px);
- {
-  header {
-    background-color: green;
-  }
+@media only screen and (max-width: 600px) {
+nav{
+  display: none;
 }
